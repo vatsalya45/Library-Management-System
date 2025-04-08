@@ -1,8 +1,11 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"
+    import="com.vatsalya.library_management.*"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Library Management</title>
+<title>Admin Dashboard</title>
 <style>
 body {
     font-family: Arial, sans-serif;
@@ -13,10 +16,6 @@ body {
     margin: 0;
     background-color: #f0f8ff; 
 }
-img{
-width:100%;
-height:100%;
-}
 .container {
 	position:absolute;
     text-align: center;
@@ -25,7 +24,6 @@ height:100%;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
-
 h1 {
     color: #333;
     margin-bottom: 20px;
@@ -45,18 +43,29 @@ h1 {
 .links a:hover {
     background-color: #45a049; 
 }
+img{
+width:100%;
+}
+
 </style>
 </head>
-
 <body>
-
-<!-- <img src="https://img.freepik.com/free-photo/abundant-collection-antique-books-wooden-shelves-generated-by-ai_188544-29660.jpg?t=st=1741805531~exp=1741809131~hmac=50fcb91247fbe17d3e3d73634781583a1a2bb22a7facba0919b0daa326b60ec0&w=1800">
- --><div class="container">
-	<h1>Welcome to my Library Management</h1>
+<img src="https://img.freepik.com/free-photo/ancient-books-adorn-library-carefully-arranged-with-classics-rare-gems_157027-2575.jpg?t=st=1742449232~exp=1742452832~hmac=d3629d73e7b763294fe07ecc9cffd821aa47ab82e838c99ffb353c2dc7dae046&w=1380">
+	<div class="container">
+	<%
+	AdminBean ab=(AdminBean)session.getAttribute("abean");
+	out.println("<h1>Welcome Admin "+ab.getuName()+"</h1><br>");
+	
+	
+	%>
 	<div class="links"> 
-		<a href="admin_register.html">Admin Register?</a>
-		<a href="admin_login.html">Admin Login?</a>
-		</div>
+	<a href="AddBook.html">Add Book</a>
+	<a href="UpdateBook.html">Update Book</a>
+	<a href="DeleteBook.html">Delete Book</a>
+	<a href="view">ViewAll Book</a>
+	<a href="logout">Logout</a>
+	</div>
+	
 	</div>
 </body>
 </html>

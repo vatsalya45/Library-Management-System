@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background: url('https://img.freepik.com/free-photo/made-clear-concrete-library-features-lightcolored-log-bookshelves-stepped-seating_73899-13428.jpg?t=st=1742911201~exp=1742914801~hmac=fc47d6016baea3953dd1162613d1694ca3d14554f9e6fd61a38db48922d86789&w=1380') no-repeat center center/cover;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.button {
+    width: 100%;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: #45a049;
+}

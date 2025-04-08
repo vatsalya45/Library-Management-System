@@ -1,63 +1,52 @@
 package com.vatsalya.library_management;
 
-import java.io.Serializable;
+
+import java.io.*;
 
 @SuppressWarnings("serial")
-public class AdminBean implements Serializable{
-	
-	private String aName, password, fName, lName, mailID;
+public class AdminBean implements Serializable {
+
+	private String uName,pWord,fName,lName,mId;
 	private long phNo;
 	
 	public AdminBean() {}
-
-	public String getaName() {
-		return aName;
+	
+	public String getuName() {
+		return uName;
 	}
-
-	public void setaName(String aName) {
-		this.aName = aName;
+	public void setuName(String uName) {
+		this.uName = uName;
 	}
-
-	public String getPassword() {
-		return password;
+	public String getpWord() {
+		return pWord;
 	}
-
-	public void setPassword(String password) {
-		this.password = password;
+	public void setpWord(String pWord) {
+		this.pWord = pWord;
 	}
-
 	public String getfName() {
 		return fName;
 	}
-
 	public void setfName(String fName) {
 		this.fName = fName;
 	}
-
 	public String getlName() {
 		return lName;
 	}
-
 	public void setlName(String lName) {
 		this.lName = lName;
 	}
-
-	public String getMailID() {
-		return mailID;
+	public String getmId() {
+		return mId;
 	}
-
-	public void setMailID(String mailID) {
-		this.mailID = mailID;
+	public void setmId(String mId) {
+		this.mId = mId;
 	}
-
 	public long getPhNo() {
 		return phNo;
 	}
-
-	public void setPhNo(long phno) {
-		this.phNo = phno;
+	public void setPhNo(long phNo) {
+		this.phNo = phNo;
 	}
 	
 	
-
 }

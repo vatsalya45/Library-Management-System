@@ -4,24 +4,27 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Error</title>
-
+<title>Library Management</title>
+<style>
+</style>
 </head>
 <body>
 
 <%
-	String msg=(String)request.getAttribute("msg");
-	
+session.removeAttribute("abean");
+session.removeAttribute("alist");
+session.invalidate();
+String msg=(String)request.getAttribute("msg");
 
-%> 
+%>
+
 <script type="text/javascript">
 alert("<%= msg %>")
 </script>
-	
-	
-	<%@include file="home.html" %>
 
 
-	
+
+<%@include file="home.html" %>
+
 </body>
 </html>

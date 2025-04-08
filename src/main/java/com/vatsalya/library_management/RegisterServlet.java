@@ -1,23 +1,37 @@
 package com.vatsalya.library_management;
 
-import java.io.IOException;
-
-import jakarta.servlet.GenericServlet;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.ServletRequest;
-import jakarta.servlet.ServletResponse;
-import jakarta.servlet.annotation.WebServlet;
-
-@WebServlet("/register")
+import java.io.*;
+import jakarta.servlet.*;
+import jakarta.servlet.annotation.*;
+import jakarta.servlet.http.*;
 @SuppressWarnings("serial")
-public class RegisterServlet extends GenericServlet {
+@WebServlet("/aRegister")
 
-	@Override
-	public void service(ServletRequest req, ServletResponse res) 
-			throws ServletException, IOException 
-	{
+public class RegisterServlet extends HttpServlet {
+	
+	protected void doPost(HttpServletRequest req,HttpServletResponse res) 
+			throws ServletException,IOException{
 		
-
+		AdminBean ab= new AdminBean();
+		ab.setuName(req.getParameter("uName"));
+		ab.setpWord(req.getParameter("pWord"));
+		ab.setfName(req.getParameter("fName"));
+		ab.setlName(req.getParameter("lName"));
+		ab.setmId(req.getParameter("mId"));
+		ab.setPhNo(Long.parseLong(req.getParameter("phNo")));
+		
+		
+		int k = new AdminRegisterDAO().insert(ab);
+		
+		if(k>0) {
+			req.setAttribute("msg", "Register Sucessfull..");
+			req.getRequestDispatcher("home.html").forward(req, res);
+		}
+		else {
+			req.setAttribute("msg","Something went wrong!");
+			req.getRequestDispatcher("Msg.jsp").forward(req, res);
+		}
+		
 	}
 
 }

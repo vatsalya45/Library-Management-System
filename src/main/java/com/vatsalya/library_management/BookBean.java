@@ -3,21 +3,12 @@ package com.vatsalya.library_management;
 import java.io.Serializable;
 
 @SuppressWarnings("serial")
-public class BookBean implements Serializable {
+public class BookBean implements Serializable{
 	
-	private String bName,bId,aName;
-	private float bPrice;
-	private int bQty;
+	private String bId,bName,bAuthor;
+	private int bPrice,bQty;
 	
 	public BookBean() {}
-
-	public String getbName() {
-		return bName;
-	}
-
-	public void setbName(String bName) {
-		this.bName = bName;
-	}
 
 	public String getbId() {
 		return bId;
@@ -27,19 +18,27 @@ public class BookBean implements Serializable {
 		this.bId = bId;
 	}
 
-	public String getaName() {
-		return aName;
+	public String getbName() {
+		return bName;
 	}
 
-	public void setaName(String aName) {
-		this.aName = aName;
+	public void setbName(String bName) {
+		this.bName = bName;
 	}
 
-	public float getbPrice() {
+	public String getbAuthor() {
+		return bAuthor;
+	}
+
+	public void setbAuthor(String bAuthor) {
+		this.bAuthor = bAuthor;
+	}
+
+	public int getbPrice() {
 		return bPrice;
 	}
 
-	public void setbPrice(float bPrice) {
+	public void setbPrice(int bPrice) {
 		this.bPrice = bPrice;
 	}
 
@@ -50,6 +49,10 @@ public class BookBean implements Serializable {
 	public void setbQty(int bQty) {
 		this.bQty = bQty;
 	}
-
+	
+	
+	
+	
+	
 
 }
